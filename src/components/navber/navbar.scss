@@ -1,0 +1,52 @@
+@import '../../style/variables.scss';
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__logo a {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    &__menu {
+        ul {
+            display: flex;
+            justify-content: space-between;
+            font-size: 20px;
+            line-height: 32px;
+            li {
+                margin: 0 12px;
+                a:hover {
+                    color: $primary;
+                }
+                a.active {
+                    color: $primary;
+                }
+            }
+        }
+    }
+    // 📱 Mobile responsive styles
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 20px;
+        &__logo {
+            width: 100%;
+            a {
+                justify-content: flex-start;
+            }
+        }
+        &__menu {
+            width: 100%;
+            margin-top: 10px;
+            ul {
+                flex-direction: column;
+                align-items: flex-start;
+                font-size: 18px;
+                li {
+                    margin: 8px 0;
+                }
+            }
+        }
+    }
+}
